@@ -1,0 +1,307 @@
+/* ===== Full Page Layout ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #a3bffa);
+  color: #222222;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* ===== Left Panel ===== */
+.left-panel {
+  background: linear-gradient(to bottom, #f9f7fd, #d7e5ff);
+  box-shadow: inset -2px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Right Panel ===== */
+.right-panel {
+  background: #fafbff;
+  box-shadow: inset 2px 0 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f06292, #ff9800, #4caf50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.server-status {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #10b981;
+}
+
+/* ===== Textarea ===== */
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+  color: #111;
+  background-color: #fff;
+  resize: none;
+  height: 120px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+/* ===== Button Group ===== */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.button-group button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(142, 45, 226, 0.2);
+}
+
+.button-group button:hover {
+  background: linear-gradient(to right, #7b1fa2, #9c27b0);
+}
+
+/* ===== Result Box ===== */
+.result-box {
+  background-color: #ffffff;
+  color: #333;
+  padding: 18px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  margin-top: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.safe {
+  color: #22c55e;
+}
+
+.suspicious {
+  color: #f59e0b;
+}
+
+.malicious {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.status-emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.highlighted-message mark.highlight {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #222222;
+}
+
+/* ===== Feedback Section ===== */
+.feedback {
+  margin-top: 15px;
+}
+
+.feedback button {
+  margin-right: 10px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.feedback-yes {
+  background-color: #10b981;
+  color: white;
+}
+
+.feedback-no {
+  background-color: #ef4444;
+  color: white;
+}
+
+.scan-again-btn {
+  margin-top: 20px;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(147, 51, 234, 0.2);
+}
+
+.scan-again-btn:hover {
+  background: linear-gradient(to right, #a855f7, #f472b6);
+}
+
+/* ===== History ===== */
+.history-list {
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-btn {
+  background: linear-gradient(to right, #f43f5e, #f97316);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.history-list ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.history-list li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ===== Right Panel Content ===== */
+.right-panel h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  background: linear-gradient(to right, #ff7c7c, #fcba03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.right-panel p,
+.right-panel li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.right-panel ul {
+  padding-left: 20px;
+}
+
+/* ===== Premium Section ===== */
+.premium-box {
+  background: #1f1f2e;
+  border: 2px solid #4f4fff;
+  padding: 1rem;
+  margin-top: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(79, 79, 255, 0.4);
+  color: white;
+}
+
+.price-tag {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.premium-features {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.premium-features li {
+  margin-bottom: 8px;
+}
+
+.subscribe-btn {
+  background: linear-gradient(135deg, #4f4fff, #a44fff);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(135deg, #5f5fff, #b45fff);
+}
+
+/* ===== Scrollbar Customization ===== */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #ec4899);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
